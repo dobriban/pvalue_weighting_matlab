@@ -83,17 +83,34 @@
 \tableofcontents
 \section{Introduction}
 
-This MATLAB package contains open source implementations of several p-value weighting methods, including Spjotvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. These are methods for improving power in multiple testing via the use of prior informaton. 
+This MATLAB package contains open source implementations of p-value weighting methods for multiple testing, including Spjotvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. %These are methods for improving power in multiple testing via the use of prior information.  
 
-The code was tested on MATLAB R2014a and R2014b. Feel free to contact the author with suggestions and comments.
+\begin{itemize}
+\item{Version: } 0.0.1
+\item{Requirements: } Tested on MATLAB R2014a and R2014b. 
+\item{Author: } Edgar Dobriban
+\item{License: } \verb+GPL-3+
+\end{itemize}
 
-\section{Quick usage example}
+In addition, this package contains the code to reproduce all simulation results from the paper \cite{dobriban2015optimal}. These are contained in the \verb+\Examples+ folder.
 
+\section{Installation}
 
-To compute Bayes weights, call \verb+w = bayes_weights(mu,sigma,q)+, where $\mu$ and $\sigma$ are the prior estimates of the effect sizes and prior standard errors. Also \verb+q+ is the significance level at which we want to test each hypothesis.
+Extract the archive in any folder, say to \verb+<path>+ . The main functions are in the \verb+Code+ directory, which needs to be on the Matlab path. For instance add the following line to your Matlab startup:
 
-\section{P-value weighting methods implemented}
+$$\verb+addpath('<path>/pvalue_weighting_matlab/Code')+$$
 
+Alternatively,  add that line to scripts that call functions in this package. An example data analysis is in the \verb+\Examples+ \verb+\Example00 - First Example\+ \verb+example.m+ file. This is described in Section \ref{example}.
+
+This file is the main documentation for the package. To start, look at the example (Section \ref{example}) or at the methods implemented (Sections \ref{methods}, \ref{methods_plus}).
+
+%\section{Quick usage example}
+%
+%
+%To compute Bayes weights, call \verb+w = bayes_weights(mu,sigma,q)+, where $\mu$ and $\sigma$ are the prior estimates of the effect sizes and prior standard errors. Also \verb+q+ is the significance level at which we want to test each hypothesis.
+
+\section{P-value weighting methods}
+\label{methods}
 
 For each p-value weighting method, we assume we observe data $T_i \sim \mathcal{N}(\mu_i, 1)$ and test each null hypothesis $H_i: \mu_i \ge 0$ against $\mu_i <0$.  The p-value for testing $H_i$ is $P_i = \Phi(T_i)$, where $\Phi$ is the normal cumulative distribution function.  For a weight vector $w \in [0,\infty)^{J}$ and significance level $q \in [0,1]$, the weighted Bonferroni procedure rejects $H_{i}$ if $P_i \le q w_i$. Usual Bonferroni corresponds to $w_i=1$.
 
@@ -164,12 +181,43 @@ This weighting scheme was proposed in \citep{roeder2006using}, who recommend $\b
 
 %\subsection{Replication}
 
+\section{Other Utilities}
+\label{methods_plus}
+
+P-value weighting methods consist of two components: (1) computing the weights and (2) running a multiple testing procedure. The focus of this package is in (1), but for the user's convenience, we provide some implementations of (2) as well.
+
+\subsection{Bonferroni Multiple Testing}
+
+
+Bonferroni multiple testing is performed with \verb+[h]=bonferroni(pvals,[fwer],[report])+. Here the inputs are 
+
+\begin{itemize}
+\item \verb+pvals+:  the p-values; a vector of length J with values between 0 and 1, 
+\item \verb+fwer+: (optional) The family-wise error rate (FWER) that needs to be controlled. Default is \verb+fwer = 0.05+. This is the probability of making at least one error.  
+\item \verb+report+: (optional) \verb+'yes'+ or \verb+'no'+. Print to screen a report of the form \verb+'Out of 100 tests,+  \verb+10 are significant using a+  \verb+family-wise error rate of 0.05.+ Default is no.
+\end{itemize}
+
+The outputs are: 
+\begin{itemize}
+\item \verb+h+:  a binary vector of length $J$. The indicators of the significant tests: 1 for significant, 0 for non-significant.
+\end{itemize}
+
+For a vector of $J$ p-values $P_i$, and a FWER of $\alpha$, Bonferroni rejects the hypotheses $P_i \le \alpha/J$. For a weight vector $w \in [0,\infty)^{J}$ and significance level $q \in [0,1]$, the weighted Bonferroni procedure rejects $H_{i}$ if $P_i \le q w_i$. Usual Bonferroni corresponds to $w_i=1$. Therefore, to run weighted Bonferroni, one must call the function \verb+bonferroni+ with the weighted p-values $Q_i = P_i/w_i$. An example:
+
+\begin{verbatim}
+%assume we have a vector of p-values P, and weights w
+fwer = 0.05;
+P_w = P/w;
+h=bonferroni(P_w,alpha);
+\end{verbatim}
+
 
 \section{An Example with Synthetic Data}
+\label{example}
 
-We perform an experiment with synthetic data, showing how using prior data can improve power in the current study. The code is in a script \verb+example.m+ in the main folder. To run it, be sure to set your working directory to the main folder where the script resides. In this document we will walk through the code in \verb+example.m+ step by step.
+We perform an experiment with synthetic data, showing how using prior data can improve power in the current study. The code is in the \verb+\Examples+ \verb+\Example00 - First Example\+ \verb+example.m+ file. To run it, set your working directory to the folder where the script resides. We will walk through  \verb+example.m+ step by step.
 
-The first step consists of getting the synthetic data. You have two options: you can walk through the generation of the data, or you can load the data directly.
+The first step is to get the data. You have two options: load the data, or go though the generating steps.
 
 \subsection{Option 1: Load the readily generated data}
 
@@ -179,7 +227,7 @@ The first option is to load the readily generated data. Run the second cell in t
 load('./Data/example_data.mat', 'J','P_current','t1','t2');
 \end{verbatim}
 
-This will lead load the same data as Option 2 generates.
+%This will lead load the same data as Option 2 generates.
 
 \subsection{Option 2: Generate data}
 
@@ -205,7 +253,7 @@ The p-values for the one-sided tests $\mu_i = 0 $ vs $\mu_i <0$ utilizing only t
 
 \subsection{Visualize Data}
 
-Either way, we should now have the variables \verb+t1,t2,P_current,J+ loaded in memory. Next we take a look at the data by plotting a scatter of the prior and current test statistics. This leads to the following figure:
+We should now have the variables \verb+t1,t2,P_current,J+ in memory. Next we plot a scatter of the prior and current test statistics:
 
 \begin{figure}[ht!]
 \centering
@@ -219,7 +267,7 @@ There is only a weak global correlation between the two effects. However, there 
 
 \subsection{Data Analysis}
 
-We want to test the hypotheses $\mu_i = 0 $ against $\mu_i <0$ for each $i$ utilizing the current data $T^{2}_i$. The simplest way to do this is to do Bonferroni-corrected multiple testing. We choose an uncorrected significance level $\alpha=0.05$ and call the \verb+bonferroni(...)+ function on the p-values. Note that this function was also written by the author.
+We want to test the hypotheses $\mu_i = 0 $ against $\mu_i <0$ for each $i$ utilizing the current data $T^{2}_i$. The simplest way is by Bonferroni-corrected multiple testing. We choose an uncorrected significance level $\alpha=0.05$ and call the \verb+bonferroni(...)+ function on the p-values.
 
 \begin{verbatim}
 alpha = 0.05; report = 'yes';
@@ -231,9 +279,7 @@ The output should be:
 Out of 1000 tests, 7 are significant using a  family-wise error rate  of 0.050000.
 \end{verbatim}
 
-Thus in our case Bonferroni leads to 7 significant test statistics.
-
-Alternatively, one can do p-value weighting. For this, we use $T^1$ as prior information. For simplicity we set the prior standard errors $\sigma=1$ in this example. More detailed discussion on the choice of $\sigma$ can be found in \citep{dobriban2015optimal}. As explained earlier, we set $q  = 0.05/J$. Then we compute the weights. Finally, we run weighted Bonferroni on the weighted p-values $P'_i = P_i/w_i$. This is the code that accomplishes it:
+Bonferroni leads to 7 significant test statistics. Alternatively, one can do p-value weighting. For this, we use $T^1$ as prior information. We set the prior standard errors $\sigma=1$ in this example. More detailed discussion on the choice of $\sigma$ can be found in \citep{dobriban2015optimal}. As explained earlier, we set $q  = 0.05/J$. Then we compute the weights. Finally, we run weighted Bonferroni on the weighted p-values $P'_i = P_i/w_i$. This is the code that accomplishes it:
 
 
 \begin{verbatim}
@@ -305,7 +351,7 @@ Another insight can be gained from plotting the weights as a function of the pri
 
 
 
-\bibliography{mypubs,weighted}
+\bibliography{weighted}
 \bibliographystyle{apalike}
 
 \end{document}
