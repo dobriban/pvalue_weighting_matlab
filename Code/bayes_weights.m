@@ -61,25 +61,14 @@ gamma = 2*var_plus./var;
 %for f defined below
 f = @(c) 1/J*sum(normcdf(-alpha - sqrt(beta + gamma.*c)))-q;
 df = @(c) 1/J*sum(-normpdf(-alpha - sqrt(beta + gamma.*c)).*gamma.*(beta + gamma.*c).^(-1/2));
+q_threshold = f(0)+q;  
 
-if (f(0)>=0)
-    q_threshold = f(0)+q;   
+if (f(0)>=0)   
     x0 = 0;
     epsi = 1e-3;
     tol = epsi*q/J;
     nmax = 100;
-    
-    % code from Matlab file-exchange function 'newton'
-    % Author:	Tashi Ravach
-    x(1) = x0 - (f(x0)/df(x0));
-    ex(1) = abs(x(1)-x0);
-    k = 2;
-    %     while (abs(ex(k-1)) >= tol) && (k <= nmax)
-    %       x(k) = x(k-1) - (f(x(k-1))/df(x(k-1)));
-    %       ex(k) = abs(x(k)-x(k-1));
-    %       k = k+1;
-    %     end
-    
+        
     x(1) = x0 - (f(x0)/df(x0));
     k = 2;
     while (abs(f(x(k-1))) >= tol) && (k <= nmax)

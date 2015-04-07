@@ -1,7 +1,7 @@
 function [lambda] = find_crossing(eta,gamma,plot)
 %find the crossing point of the two competing maxima
 %Inputs:
-%eta <0 - mean
+%eta - mean
 %gamma > 1 - marginal variance: gamma^2 = 1 + sigma^2
 %
 %lambda - crossing point of the two maxima
