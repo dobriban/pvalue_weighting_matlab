@@ -23,6 +23,7 @@ ylim([min_sigma,max_sigma])
 zlim([0,max(max(Z))])
 xlabel('\eta');
 ylabel('\sigma');
+zlabel('w');
 %%
 saveTightFigure(gcf,'Regularized_Weights_Surface.pdf')
 %% grayscale
