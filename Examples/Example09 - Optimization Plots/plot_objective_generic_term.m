@@ -1,4 +1,4 @@
-cd('C:\Dropbox\Weighted New\pvalue_weighting_matlab\Examples\Example09 - Optimization Plots');
+cd('C:\Git\pvalue_weighting_matlab\Examples\Example09 - Optimization Plots');
 addpath '../../Code'
 addpath '../../Code/Helper Code'
 %% plot summand in objective function

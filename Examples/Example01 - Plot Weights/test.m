@@ -1,5 +1,5 @@
 %plot weights: Spjotvoll and regularized
-cd('C:\Dropbox\Weighted New\pvalue_weighting_matlab\Examples\Example01 - Plot Weights/');
+cd('C:\Git\pvalue_weighting_matlab\Examples\Example01 - Plot Weights/');
 addpath '../../Code'
 addpath '../../Code/Helper Code'
 %% Plot Regularized weights

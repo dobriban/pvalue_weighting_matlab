@@ -1,6 +1,6 @@
 %% Study the power of various weighting schemes
 % depends on weighting_power_study
-codedir =  ['C:/Dropbox/Weighted New/pvalue_weighting_matlab/Examples/Example02b - Power In Noise - Sparse Means'];
+codedir =  ['C:/Git/pvalue_weighting_matlab/Examples/Example02b - Power In Noise - Sparse Means'];
 cd(codedir);
 %
 addpath '../../Code'

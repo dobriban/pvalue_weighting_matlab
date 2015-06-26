@@ -1,6 +1,6 @@
 %% power gain from p-value weighting
 % distribution of means: mixture of point mass at 0 and another value
-cd('C:\Dropbox\Weighted New\pvalue_weighting_matlab\Examples\Example04 - Power Sparse Means');
+cd('C:\Git\pvalue_weighting_matlab\Examples\Example04 - Power Sparse Means');
 addpath '../../Code'
 addpath '../../Code/Helper Code'
 %%
