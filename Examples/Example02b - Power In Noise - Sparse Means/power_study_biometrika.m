@@ -1,7 +1,7 @@
 %% Study the power of various weighting schemes 
 %Biometrika style plots
 % depends on weighting_power_study
-codedir =  ['C:/Dropbox/Weighted New/pvalue_weighting_matlab/Examples/Example02b - Power In Noise - Sparse Means'];
+codedir =  ['C:/Git/pvalue_weighting_matlab/Examples/Example02b - Power In Noise - Sparse Means'];
 cd(codedir);
 %
 addpath '../../Code'
@@ -84,7 +84,7 @@ xlabel('\pi_1');
 %ylabel('power');
 set(gca,'fontsize',8)
 %%
-saveTightFigure(gcf,'PowerComparison_SparseMeans_grayscale.pdf')
+saveTightFigure(gcf,'PowerComparison_SparseMeans_grayscale_test.pdf')
 %% plot the weights themselves
 a = {'-','--',':','-.'};
 col = colormap(gray(4));
