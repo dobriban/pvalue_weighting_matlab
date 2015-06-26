@@ -43,15 +43,15 @@ col = colormap(gray(4));
 
 h = plot(sparsity, pd_unif); hold on
 set(h,'LineStyle',a{1});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(1,:));
 h = plot(sparsity, pd_spjot,'g'); hold on
 set(h,'LineStyle',a{2});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(2,:));
 h = plot(sparsity, pd_reg,'r'); hold on
 set(h,'LineStyle',a{3});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(3,:));
 %plot(sparsity, pd_unif,sparsity, pd_spjot,'g-.*',sparsity, pd_reg,'r-o')
 %title('Deterministic');
@@ -68,15 +68,15 @@ set(gca,'fontsize',8)
 subplot(1,2,2)
 h = plot(sparsity, pa_unif); hold on
 set(h,'LineStyle',a{1});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1); %used to be 2
 set(h,'color',col(1,:));
 h = plot(sparsity, pa_spjot,'g'); hold on
 set(h,'LineStyle',a{2});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(2,:));
 h = plot(sparsity, pa_reg,'r'); hold on
 set(h,'LineStyle',a{3});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(3,:));
 %plot(sparsity, pa_unif,sparsity, pa_spjot,'g-.*',sparsity, pa_reg,'r-o')
 %title('Average');
@@ -84,7 +84,7 @@ xlabel('\pi_1');
 %ylabel('power');
 set(gca,'fontsize',8)
 %%
-saveTightFigure(gcf,'PowerComparison_SparseMeans_grayscale_test.pdf')
+saveTightFigure(gcf,'PowerComparison_SparseMeans_grayscale.pdf')
 %% plot the weights themselves
 a = {'-','--',':','-.'};
 col = colormap(gray(4));
@@ -93,11 +93,11 @@ figure,
 subplot(1,2,1)
 h = plot(sparsity, w_s(:,2)); hold on
 set(h,'LineStyle',a{1});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(1,:));
 
 h =plot(sparsity, w_s(:,1));
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'LineStyle',a{2});
 set(h,'color',col(2,:));
 
@@ -111,11 +111,11 @@ subplot(1,2,2)
 
 h = plot(sparsity, w_r(:,2)); hold on
 set(h,'LineStyle',a{1});
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'color',col(1,:));
 
 h =plot(sparsity, w_r(:,1));
-set(h,'LineWidth',2);
+set(h,'LineWidth',1);
 set(h,'LineStyle',a{2});
 set(h,'color',col(2,:));
 

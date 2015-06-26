@@ -1,6 +1,6 @@
 %% Study the power of various weighting schemes
 % depends on weighting_power_study
-codedir =  ['C:/Dropbox/Weighted New/pvalue_weighting_matlab/Examples/Example10- Compare Weighting Methods'];
+codedir =  ['C:/Git/pvalue_weighting_matlab/Examples/Example10- Compare Weighting Methods'];
 cd(codedir);
 addpath '../../Code'
 addpath '../../Code/Helper Code'
@@ -59,10 +59,10 @@ power_unw = power0(ones(J,1))*ones(length(global_array),1);
 a = {'-','--',':','-.'};
 col = colormap(gray(5));
 figure, hold on
-h = plot(global_array, power_unw,'linewidth',2); set(h,'LineStyle',a{1}); set(h,'color',col(1,:));
-h = plot(global_array, power_reg,'linewidth',2); set(h,'LineStyle',a{2});set(h,'color',col(2,:));
-h = plot(global_array, power_exp,'linewidth',2); set(h,'LineStyle',a{3});set(h,'color',col(3,:));
-h = plot(global_array, power_top,'linewidth',2); set(h,'LineStyle',a{4});set(h,'color',col(4,:));
+h = plot(global_array, power_unw,'linewidth',1); set(h,'LineStyle',a{1}); set(h,'color',col(1,:));
+h = plot(global_array, power_reg,'linewidth',1); set(h,'LineStyle',a{2});set(h,'color',col(2,:));
+h = plot(global_array, power_exp,'linewidth',1); set(h,'LineStyle',a{3});set(h,'color',col(3,:));
+h = plot(global_array, power_top,'linewidth',1); set(h,'LineStyle',a{4});set(h,'color',col(4,:));
 ylim([0,0.12])
 %h = legend('Unweighted','Informed','Exponential','Filtering','location','Best');
 ylabel('Power');
