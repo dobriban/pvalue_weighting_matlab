@@ -65,7 +65,7 @@ h = plot(global_array, power_exp,'linewidth',1); set(h,'LineStyle',a{3});set(h,'
 h = plot(global_array, power_top,'linewidth',1); set(h,'LineStyle',a{4});set(h,'color',col(4,:));
 ylim([0,0.12])
 %h = legend('Unweighted','Informed','Exponential','Filtering','location','Best');
-ylabel('Power');
+ylabel('power');
 %set(h,'FontSize',8);
 
 %%
