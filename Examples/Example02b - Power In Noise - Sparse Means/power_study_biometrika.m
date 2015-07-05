@@ -40,7 +40,7 @@ figure
 subplot(1,2,1)
 set(gca,'fontsize',8)
 col = colormap(gray(10));
-
+%old version: col = colormap(gray(5));
 h = plot(sparsity, pd_unif); hold on
 set(h,'LineStyle',a{1});
 set(h,'LineWidth',1);

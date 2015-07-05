@@ -8,7 +8,8 @@ q = 1/20;
 
 a = {'-','--',':','-.'};
 figure, hold on
-col = colormap(gray(5));
+col = colormap(gray(10)); %old version: col = colormap(gray(5));
+
 for i=1:length(eta_a)
   for j=1:length(sigma_a)
     eta = eta_a(i);
