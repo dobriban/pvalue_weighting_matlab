@@ -65,7 +65,7 @@ ylabel('weight');
 saveTightFigure(gcf,'Spjotvoll_Weights_Plot.pdf')
 
 %% Plot Spjotvoll weights  - other modes
-c_grid = 1;
+c_grid = linspace(-3,5,5)';
 mini  = -5;
 maxi  = -0.01;
 num = 1000;
@@ -87,4 +87,5 @@ plot(-grid,normw,'*');
 %title('optimal weights');
 xlabel('prior effect size');
 ylabel('weight');
+%%
 saveTightFigure(gcf,'Multi_Spjotvoll_Weights_Plot.pdf')
