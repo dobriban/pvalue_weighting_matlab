@@ -57,7 +57,7 @@ end
 power_unw = power0(ones(J,1))*ones(length(global_array),1);
 %%
 a = {'-','--',':','-.'};
-col = colormap(gray(5));
+col = colormap(gray(10));
 figure, hold on
 h = plot(global_array, power_unw,'linewidth',1); set(h,'LineStyle',a{1}); set(h,'color',col(1,:));
 h = plot(global_array, power_reg,'linewidth',1); set(h,'LineStyle',a{2});set(h,'color',col(2,:));

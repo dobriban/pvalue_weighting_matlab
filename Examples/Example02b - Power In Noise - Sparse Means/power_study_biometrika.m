@@ -39,7 +39,7 @@ a = {'-','--',':','-.'};
 figure
 subplot(1,2,1)
 set(gca,'fontsize',8)
-col = colormap(gray(4));
+col = colormap(gray(10));
 
 h = plot(sparsity, pd_unif); hold on
 set(h,'LineStyle',a{1});
