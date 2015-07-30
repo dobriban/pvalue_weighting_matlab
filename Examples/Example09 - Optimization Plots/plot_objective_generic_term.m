@@ -8,7 +8,9 @@ q = 1/20;
 
 a = {'-','--',':','-.'};
 figure, hold on
+
 col = colormap(gray(10)); %old version: col = colormap(gray(5));
+%col = colormap(jet);
 
 for i=1:length(eta_a)
   for j=1:length(sigma_a)
@@ -19,6 +21,7 @@ for i=1:length(eta_a)
     h = ezplot(generic_term,[0,1/q]);
     ylim([0,1]);
     set(h,'LineWidth',1);  %# Sets the line width to 1
+    %set(h,'LineWidth',2); for talk
     c = a(2*(i-1)+j);
     set(h,'LineStyle',c{1}); 
     set(h,'color',col(2*(i-1)+j,:));
@@ -32,6 +35,10 @@ set(gca,'LooseInset',get(gca,'TightInset'))
 
 %% plot
 saveTightFigure(gcf,'objective_function.pdf')
+
+%% plot
+saveTightFigure(gcf,'objective_function_talk.pdf')
+
 
 %% grayscale
 saveTightFigure(gcf,'objective_function_grayscale.pdf')
