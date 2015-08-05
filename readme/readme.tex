@@ -92,7 +92,7 @@ This MATLAB package contains open source implementations of p-value weighting me
 \item{License: } \verb+GPL-3+
 \end{itemize}
 
-In addition, this package contains the code to reproduce all simulation results from the paper \cite{dobriban2015optimal}. These are contained in the \verb+\Examples+ folder.
+In addition, this package contains the code to reproduce all simulation results from the paper \cite{dobriban2015optimal}. These are contained in the \verb+\Examples+ folder. The data analyses from that paper can be reproduced with the code from \verb+\Data Analysis+, see Section \ref{repro}. 
 
 \section{Installation}
 
@@ -349,7 +349,45 @@ Another insight can be gained from plotting the weights as a function of the pri
 \label{scatter_prior_current}
 \end{figure}
 
+\section{Reproducing Data Analysis Results}
+\label{repro}
 
+\subsection{Pipeline}
+
+To reproduce the data analysis results from the \cite{dobriban2015optimal} paper, we provide the pipeline used to generate those results. This pipeline can be used to efficiently and reproducibly perform standard data analyses with p-value weighting of GWAS data.  It has the following features:
+
+\begin{itemize}
+\item High-level functions that perform a standard set of analyses: The user specifies the prior and current data sets, and the methods described in our paper are automatically performed.
+
+\item Customizable parameters: The user can can change many aspects of the analysis by specifying appropriate parameters. For instance, it is possible to change the parameters of the weighting schemes.
+
+\item Reproducibility: The results of analyses are recorded in a standard format and directory structure, which enable a reproducible analysis.
+
+\item Extensibility:  It is possible to add new data sets, weighting schemes, and perform custom workflows. Some of this will require writing new code.
+\end{itemize}
+
+\subsection{Reproducing results}
+
+Please follow these steps:
+
+\begin{itemize}
+\item You first need to download and process the original data files. Due to data access policies these could not be included in the package.
+\item To download data files, go to \verb+Data/Raw/[Data Set Name]+ and consult the description.txt file for the description web link for the appropriate data sets.
+\begin{enumerate}
+\item Download and unpack each data set into its own \verb+Data/Raw/[Data Set Name]+ folder
+\item Run the MATLAB scripts in the \verb+Data/Raw/[Data Set Name]/Code+ folder to process the raw data into MATLAB files. They will be deposited in \verb+Data/Raw/+.
+\item Repeat the steps above for each data set.
+\end{enumerate}
+\item To reproduce or change existing analyses go to the folder \verb+Data Analysis/[AnalysisName]+ and run or modify analysis.m
+\end{itemize}
+
+It is also possible to extend the pipeline: 
+\begin{itemize}
+\item Add new analyses (for instance on newly specified pairs of GWAS data sets) by creating a new folder \verb+Analysis/[AnalysisName]+
+\item Add new data sets by creating a new folder \verb+Data/Raw/[DataName]/+ where you can copy the data for a first processing. Using the existing data sets as a template, process the new data into a MATLAB format, which will then be saved in the folder \verb+Data/Processed+.
+\end{itemize}
+
+Note: The change directory statement in analysis.m is configured to the author's local machine and should be modified accordingly.
 
 \bibliography{weighted}
 \bibliographystyle{apalike}
