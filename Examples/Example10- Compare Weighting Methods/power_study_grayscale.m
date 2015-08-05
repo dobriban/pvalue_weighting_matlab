@@ -1,5 +1,6 @@
 %% Study the power of various weighting schemes
 % depends on weighting_power_study
+%Figures produced on my laptop
 codedir =  ['C:/Git/pvalue_weighting_matlab/Examples/Example10- Compare Weighting Methods'];
 cd(codedir);
 addpath '../../Code'
@@ -67,6 +68,8 @@ h = plot(global_array, power_top,'linewidth',1); set(h,'LineStyle',a{4});set(h,'
 ylim([0,0.12])
 %h = legend('Unweighted','Informed','Exponential','Filtering','location','Best');
 ylabel('power');
+l=xlabel('$\phi$, $\beta$ or $|M|$');
+set(l,'Interpreter','Latex');
 %set(h,'FontSize',8);
 
 %%
