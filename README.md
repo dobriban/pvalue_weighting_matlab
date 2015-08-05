@@ -27,10 +27,10 @@ This pipeline can be used to efficiently and reproducibly perform standard data 
 * Pull the repository to a folder on a local machine or a cluster
 * To inspect the results of existing analyses, go to the folder Data Analysis/[AnalysisName]/Results and browse text and image files.
 * To reproduce existing analyses, you first need to download and process the original data files. Due to data access policies these could not be included in the package.
-** To download data files, go to Data/Raw/[Data Set Name] and consult the description.txt file for the description web link for the appropriate data sets.
-** Download and unpack each data set into its own Data/Raw/[Data Set Name] folder
-** Run the MATLAB scripts in the Data/Raw/[Data Set Name]/Code folder to process the raw data into MATLAB files. They will be deposited in Data/Raw/.
-** Repeat the steps above for each data set.
+  1. To download data files, go to Data/Raw/[Data Set Name] and consult the description.txt file for the description web link for the appropriate data sets.
+  2. Download and unpack each data set into its own Data/Raw/[Data Set Name] folder
+  3. Run the MATLAB scripts in the Data/Raw/[Data Set Name]/Code folder to process the raw data into MATLAB files. They will be deposited in Data/Raw/.
+  4. Repeat the steps above for each data set.
 * To reproduce or change existing analyses go to the folder Data Analysis/[AnalysisName] and run or modify analysis.m
 * Add new analyses (for instance on newly specified pairs of GWAS data sets) by creating a new folder Analysis/[AnalysisName]
 * Add new data sets by creating a new folder Data/Raw/[DataName]/ where you can copy the data for a first processing. Using the existing data sets as a template, process the new data into a MATLAB format, which will then be saved in the folder Data/Processed.
