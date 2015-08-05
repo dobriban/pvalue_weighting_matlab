@@ -1,17 +1,17 @@
 function [h,clusters,snp_overlap,methods_used]= full_analysis(prior,current,sensitivity_analysis,methods,q,report,pcer,sigma_array,beta,P_thresh,...
     print_results,plot_results,analysis_ID, generate_tables)
 
-addpath '../../Code/Weighting'
-addpath '../../Code/External Helper Code'
+addpath '../../Code'
+addpath '../../Code/Helper Code'
 
 [snp_overlap, P_prior, N_prior, Z_prior, P_current, N_current] = load_data(prior, current);
 J = length(P_current);
 
 if ~exist('methods','var')
-    methods = {'Unweighted', 'Spjotvoll', 'Regularized', 'Exponential','Select top'};
+    methods = {'Unweighted', 'Spjotvoll', 'Bayes', 'Exponential','Select top'};
 end
 methods_used = {};
-if any(strcmp(methods,'Regularized'))
+if any(strcmp(methods,'Bayes'))
     if ~exist('sigma_array','var')
         sigma_array = [0.1 1 10];
     end
@@ -71,8 +71,8 @@ if any(strcmp(methods,'Spjotvoll'))
     h(current_method,:)=h_s;
     methods_used{1,length(methods_used)+1} =  'Spjotvoll';
 end
-%% (3) Regularized weighting
-if any(strcmp(methods,'Regularized'))
+%% (3) Bayes weighting
+if any(strcmp(methods,'Bayes'))
     
     if ~exist('pcer','var')
         pcer = 1/J; %level used in weighting
@@ -80,10 +80,10 @@ if any(strcmp(methods,'Regularized'))
     sigma = sqrt(N_current./N_prior);
     w_r = zeros(J,length(sigma_array));
     for i=1:length(sigma_array)
-        w_r(:,i) = regularized_weights(mu,sigma_array(i)*sigma,pcer);
+        w_r(:,i) = bayes_weights(mu,sigma_array(i)*sigma,pcer);
         P_wr = P_current./w_r(:,i);
         if strcmp(report,'yes')
-            str = sprintf('Regularized; sigma = %f: ',sigma_array(i));
+            str = sprintf('Bayes; sigma = %f: ',sigma_array(i));
             fprintf(str);
         end
         [h_r]=bonferroni(P_wr,q,report);

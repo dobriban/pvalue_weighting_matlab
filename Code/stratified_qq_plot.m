@@ -1,6 +1,6 @@
 function fig = stratified_qq_plot(prior,current,func,funcname, lower_thresh, upper_thresh)
 %%
-addpath '../../Code/External Helper Code'
+addpath '../../Code/Helper Code'
 
 [~, P_prior,~, ~, P_current, ~] = load_data(prior, current);
 
