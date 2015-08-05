@@ -1,0 +1,7 @@
+Results of P-value Weighting Analysis
+
+Prior Study: Lipids-TG-ONE.Teslovich.Nature.2010
+Current Study: PGC-SCZ-2012.Nat.Genet.2012
+
+Unweighted	Spjotvoll	Regularized; sigma = 0.100000: 	Regularized; sigma = 1.000000: 	Regularized; sigma = 10.000000: 	Exponential; beta = 1.000000: 	Exponential; beta = 2.000000: 	Exponential; beta = 4.000000: 	Select top; P_thresh = 1.000000e-02: 	Select top; P_thresh = 1.000000e-04: 	Select top; P_thresh = 1.000000e-06: 	\\ 
+& \multicolumn{1}{l|}{116}& \multicolumn{1}{l|}{214}& \multicolumn{1}{l|}{214}& \multicolumn{1}{l|}{223}& \multicolumn{1}{l|}{123}& \multicolumn{1}{l|}{92}& \multicolumn{1}{l|}{0}& \multicolumn{1}{l|}{0}& \multicolumn{1}{l|}{217}& \multicolumn{1}{l|}{96}& \multicolumn{1}{l|}{39}\\ 

@@ -1,0 +1,12 @@
+Dataset:
+CARDIoGRAM_GWAS_RESULTS.TXT
+
+Download from:
+http://www.cardiogramplusc4d.org/downloads/
+Specifically, link is:
+ftp://ftp.sanger.ac.uk/pub/cardiogramplusc4d/c4d_cad_discovery_metaanalysis.zip
+
+Publication reference: 
+Large-scale association analysis identifies 13 new susceptibility loci
+for coronary artery disease, Schunkert et al. 
+Nature Genetics 43, 333–338 (2011) doi:10.1038/ng.784

@@ -1,0 +1,14 @@
+Dataset:
+pgc.scz.full.2012-04.txt
+
+
+Downloaded from:
+http://www.med.unc.edu/pgc/downloads
+Specifically: 
+http://www.med.unc.edu/pgc/files/resultfiles/pgc.scz.2012-04.zip
+
+Publication reference:
+1: Schizophrenia Psychiatric Genome-Wide Association Study (GWAS) Consortium.
+Genome-wide association study identifies five new schizophrenia loci. Nat Genet. 
+2011 Sep 18;43(10):969-76. doi: 10.1038/ng.940. PubMed PMID: 21926974; PubMed
+Central PMCID: PMC3303194.

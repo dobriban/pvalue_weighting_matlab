@@ -1,0 +1,103 @@
+Results of P-value Weighting Analysis - Clustered Results
+
+Prior Study: CKD-eGFRcrea.Kottgen.Nat.Genet.2010
+Current Study: C4D-CAD.C4D.Consortium.Nat.Genet.2011
+
+Number of overlapping SNPs: 521225
+Number of overlapping SNPs not found in UCSC database: 768
+
+Weighted Bonferroni Methods Tested: 
+Unweighted; Spjotvoll; Regularized; sigma = 0.100000: ; Regularized; sigma = 1.000000: ; Regularized; sigma = 10.000000: ; Exponential; beta = 1.000000: ; Exponential; beta = 2.000000: ; Exponential; beta = 4.000000: ; Select top; P_thresh = 1.000000e-02: ; Select top; P_thresh = 1.000000e-04: ; Select top; P_thresh = 1.000000e-06: ; 
+Family-wise Error Rate controlled at: 5.000000e-02
+
+Number of Significant SNPs in Distinct LD Blocks: 
+Unweighted: 4
+Spjotvoll: 2
+Regularized; sigma = 0.100000: : 2
+Regularized; sigma = 1.000000: : 4
+Regularized; sigma = 10.000000: : 4
+Exponential; beta = 1.000000: : 4
+Exponential; beta = 2.000000: : 5
+Exponential; beta = 4.000000: : 4
+Select top; P_thresh = 1.000000e-02: : 1
+Select top; P_thresh = 1.000000e-04: : 0
+Select top; P_thresh = 1.000000e-06: : 1
+
+Parameter settings:
+q = 5.000000e-02
+pcer = 1.918557e-06
+sigma = 1.000000e-01
+sigma = 1.000000e+00
+sigma = 1.000000e+01
+beta= 1.000000e+00
+beta= 2.000000e+00
+beta= 4.000000e+00
+P_thresh= 1.000000e-02
+P_thresh= 1.000000e-04
+P_thresh= 1.000000e-06
+
+Lead Significant SNPs in each cluster: 
+Unweighted: 4 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+
+Spjotvoll: 2 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs4977574	9	22098573	6.502000e-28
+
+Regularized; sigma = 0.100000: : 2 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs4977574	9	22098573	6.502000e-28
+
+Regularized; sigma = 1.000000: : 4 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+
+Regularized; sigma = 10.000000: : 4 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+
+Exponential; beta = 1.000000: : 4 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+
+Exponential; beta = 2.000000: : 5 SNPs
+rsID	chr	position	current_Pvalue
+rs646776	1	109818529	7.007000e-11
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+rs13333226	16	20365653	1.249000e-03
+
+Exponential; beta = 4.000000: : 4 SNPs
+rsID	chr	position	current_Pvalue
+rs9349379	6	12903956	6.503000e-21
+rs4977574	9	22098573	6.502000e-28
+rs1333050	9	22125912	8.671000e-15
+rs13333226	16	20365653	1.249000e-03
+
+Select top; P_thresh = 1.000000e-02: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs3217992	9	22003222	3.560000e-16
+
+Select top; P_thresh = 1.000000e-04: : 0 SNPs
+rsID	chr	position	current_Pvalue
+
+Select top; P_thresh = 1.000000e-06: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs10494040	1	110015731	1.672000e-04
+

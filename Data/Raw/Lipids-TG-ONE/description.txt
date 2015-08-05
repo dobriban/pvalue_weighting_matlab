@@ -1,0 +1,14 @@
+Dataset:
+TG_ONE_Eur.tbl.sorted.txt
+
+Downloaded from:
+http://www.broadinstitute.org/mpg/pubs/lipids2010/
+Specifically: 
+http://www.broadinstitute.org/mpg/pubs/lipids2010/TC_ONE_Eur.tbl.sorted.gz
+
+Publication reference:
+Nature. 2010 Aug 5; 466(7307): 707–713.
+doi:  10.1038/nature09270
+PMCID: PMC3039276
+NIHMSID: NIHMS213289
+Biological, Clinical, and Population Relevance of 95 Loci for Blood Lipids

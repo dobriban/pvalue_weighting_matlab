@@ -1,0 +1,11 @@
+DistiLD database:
+http://distild.jensenlab.org/download.html
+Specifically: 
+http://distild.jensenlab.org/lds.tsv.gz
+Process into Matlab format with load_distild.m file.
+
+SNP annotation:
+From UCSC genome annotation database for the Feb. 2009 assembly of the human genome 
+(hg19, GRCh37 Genome Reference Consortium Human Reference 37). 
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/database/snp141Common.txt.gz
+Process into Matlab format with load_snp141common.m file.

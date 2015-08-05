@@ -1,0 +1,10 @@
+Dataset:
+CKDGen-eGFRcrea_meta_post.csv
+
+Download from:
+http://www.nhlbi.nih.gov/research/intramural/researchers/pi/fox-caroline/datasets
+Specifically: 
+http://www.nhlbi.nih.gov/sites/www.nhlbi.nih.gov/files/CKDGen-eGFRcrea_meta_post.csv 
+
+Publication reference:
+Kottgen A, Pattaro C, Boger CA et al. New loci associated with kidney function and chronic kidney disease. Nat Genet 2010 May;42(5):376-84.

@@ -1,3 +1,30 @@
+Data/Raw/Cardiogram-CAD/CARDIoGRAM_GWAS_RESULTS.txt
+Data/Processed/CKD-eGFRcrea.Kottgen.Nat.Genet.2010.mat
+Data/Processed/Cardiogram-CAD.Nat.Genet.2011.mat
+Data/Processed/Lipids-TG-ONE.Teslovich.Nature.2010.mat
+Data/Processed/PGC-SCZ-2012.Nat.Genet.2012.mat
+Data/Raw/C4D-CAD/C4D.ng.782-S1.pdf
+Data/Raw/C4D-CAD/C4D.ng.782.pdf
+Data/Raw/CKD-eGFRcrea/CKDGen-eGFRcrea_meta_post.csv
+Data/Raw/CKD-eGFRcrea/ng.568-S1.pdf
+Data/Raw/CKD-eGFRcrea/ng.568.pdf
+Data/Raw/Cardiogram-CAD/ng.784.pdf
+Data/Raw/Lipids-TG-ONE/TG_ONE_Eur.tbl.sorted.txt
+Data/Raw/Lipids-TG-ONE/nature09270-s1.pdf
+Data/Raw/Lipids-TG-ONE/nature09270.pdf
+Data/Processed/C4D-CAD.C4D.Consortium.Nat.Genet.2011.mat
+Data/Raw/Cardiogram-CAD/ng.784-S1.pdf
+Data/Raw/PGC-SCZ-2012/ng.940-S1.pdf
+Data/Raw/PGC-SCZ-2012/ng.940-S2.xls
+Data/Raw/PGC-SCZ-2012/ng.940.pdf
+Data/Raw/PGC-SCZ-2012/pgc.scz.clump.2012-04.txt
+Data/Raw/PGC-SCZ-2012/pgc.scz.full.2012-04.txt
+Data/Raw/PGC-SCZ-2012/readme.pdf
+Data/Raw/SNP Info/snp141Common.txt
+Data/Processed/snp141Common.mat
+Data/Processed/DistiLD.lds.mat
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
