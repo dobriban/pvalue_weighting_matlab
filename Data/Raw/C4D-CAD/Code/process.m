@@ -54,4 +54,4 @@ toc
 
 
 %%
-save('../../../Processed/C4D-CAD.C4D.Consortium.Nat.Genet.2011.mat','SNP','chr','pos','A1','A2','freqA1','log_odds','log_odds_se','P','N');
+save('../../Processed/C4D-CAD.C4D.Consortium.Nat.Genet.2011.mat','SNP','chr','pos','A1','A2','freqA1','log_odds','log_odds_se','P','N');

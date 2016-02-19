@@ -42,5 +42,5 @@ end
 % LD_right_end = cell2mat(LD_right_end(1:i-1));
 
 %%
-save('lds.mat','LD_chr','LD_left_end','LD_right_end');
+save('../../Processed/lds.mat','LD_chr','LD_left_end','LD_right_end');
 

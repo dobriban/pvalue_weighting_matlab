@@ -51,4 +51,4 @@ sum(problem_snp)
 %% from the paper
 N =  96598*ones(length(SNP),1);
 %%
-save('../../../Processed/Lipids-TG-ONE.Teslovich.Nature.2010.mat','SNP','A1','A2','Weight','GC_Zscore','P','Overall','N');
+save('../../Processed/Lipids-TG-ONE.Teslovich.Nature.2010.mat','SNP','A1','A2','Weight','GC_Zscore','P','Overall','N');

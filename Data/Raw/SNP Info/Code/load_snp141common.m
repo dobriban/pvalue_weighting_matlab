@@ -47,4 +47,4 @@ SNP = SNP(~problem_snp);
 chr = chr(~problem_snp);
 pos = pos(~problem_snp);
 %%
-save('../../../Processed/snp141Common.mat','SNP','chr','pos');
+save('../../Processed/snp141Common.mat','SNP','chr','pos');
