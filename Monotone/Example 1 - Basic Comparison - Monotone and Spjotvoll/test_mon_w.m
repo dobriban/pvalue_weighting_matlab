@@ -90,7 +90,7 @@ legend('Spjotvoll','Monotone','Location','Best');
 xlabel('Prior Mean');
 ylabel('Weight');
 set(gca,'fontsize',20)
-filename = sprintf( 'Numerical DisAgreement of Monotone and Spjotvoll.png');
+filename = sprintf( 'Numerical_DisAgreement_of_Monotone_and_Spjotvoll.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
 
@@ -106,7 +106,7 @@ hist(log10(1-corre),num_exp)
 xlabel('log10(1 - rho)');
 ylabel('Frequency');
 set(gca,'fontsize',20)
-filename = sprintf( 'Numerical Agreement of Monotone and Spjotvoll.png');
+filename = sprintf( 'Numerical_Agreement_of_Monotone_and_Spjotvoll.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
 
