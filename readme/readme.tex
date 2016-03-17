@@ -83,16 +83,20 @@
 \tableofcontents
 \section{Introduction}
 
-This MATLAB package contains open source implementations of p-value weighting methods for multiple testing, including Spj\o tvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. %These are methods for improving power in multiple testing via the use of prior information.  
+This MATLAB package contains open source implementations of p-value weighting methods for multiple testing, including Spj\o tvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. These are methods for improving power in multiple testing via the use of prior information.  
 
 \begin{itemize}
-\item{Version: } 0.0.1
+\item{Version: } 0.0.2
 \item{Requirements: } Tested on MATLAB R2014a and R2014b. 
 \item{Author: } Edgar Dobriban
 \item{License: } \verb+GPL-3+
 \end{itemize}
 
-In addition, this package contains the code to reproduce all simulation results from the paper \cite{dobriban2015optimal}. These are contained in the \verb+\Examples+ folder. The data analyses from that paper can be reproduced with the code from \verb+\Data Analysis+, see Section \ref{repro}. 
+In addition, this package contains the code to reproduce all simulation results from our paper \cite{dobriban2015optimal}. These are contained in the \verb+\Examples+ folder. The data analyses from that paper can be reproduced with the code from \verb+\Data Analysis+, see Section \ref{repro}. 
+
+\subsection{News}
+
+Version 0.0.2 (March 16, 2016) now includes the new monotone and bounded weights, for which a preprint will be made available shortly. These are not yet fully documented. 
 
 \section{Installation}
 
@@ -112,7 +116,9 @@ This file is the main documentation for the package. To start, look at the examp
 \section{P-value weighting methods}
 \label{methods}
 
-For each p-value weighting method, we assume we observe data $T_i \sim \mathcal{N}(\mu_i, 1)$ and test each null hypothesis $H_i: \mu_i \ge 0$ against $\mu_i <0$.  The p-value for testing $H_i$ is $P_i = \Phi(T_i)$, where $\Phi$ is the normal cumulative distribution function.  For a weight vector $w \in [0,\infty)^{J}$ and significance level $q \in [0,1]$, the weighted Bonferroni procedure rejects $H_{i}$ if $P_i \le q w_i$. Usual Bonferroni corresponds to $w_i=1$.
+For a general review of p-value weighting, we refer to \cite{roeder2009genome, gui2012weighted}. The basic setup is simple. We assume that we have data $T_i \sim \mathcal{N}(\mu_i, 1)$ and test each null hypothesis $H_i: \mu_i \ge 0$ against $\mu_i <0$.  In a typical application, $T_i$ are the test statistics for association of the $i$-th genetic variant---say a single nucleotide polymorphism (SNP)---to a phenotype of interest, say height. 
+
+The p-value for testing $H_i$ is $P_i = \Phi(T_i)$, where $\Phi$ is the normal cumulative distribution function.  For a weight vector $w \in [0,\infty)^{J}$ and significance level $q \in [0,1]$, the weighted Bonferroni procedure rejects $H_{i}$ if $P_i \le q w_i$. Usual Bonferroni corresponds to $w_i=1$. The weights can be based on independent prior information. If we guess well, the power of the method may increase. 
 
 Each p-value weighting method assumes some additional independent information about $\mu_i$, and returns a weight vector $w$. These can then be used for weighted Bonferroni or other multiple testing procedures.
 
