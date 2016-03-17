@@ -1,0 +1,19 @@
+The Summary_results.txt file contains the following information:
+
+SNP: SNP-name.
+
+Chr_hg18build36: Chromosome based on hg18build36.
+
+Position_hg18build36: Position based on hg18build36.
+
+Non_Effect_Allele: The reference allele.
+
+Effect_Allele: The allele on which the direction of effect is based.
+
+Direction_of_effect_85: Direction of effect in the discovery phase analysis in which individuals >=90 years are compared to individuals <65 years. "+" means the allele is more frequent in individuals >=85 years, while "-" means the opposite.
+
+Pvalue_85: P-value of the discovery phase analysis in which individuals >=85 years are compared to individuals <65 years.
+
+Direction_of_effect_90: Direction of effect in the discovery phase analysis in which individuals >=90 years are compared to individuals <65 years. ""+" means the allele is more frequent in individuals >=90 years, while "-" means the opposite.
+
+Pvalue_90: P-value of the discovery phase analysis in which individuals >=90 years are compared to individuals <65 years.

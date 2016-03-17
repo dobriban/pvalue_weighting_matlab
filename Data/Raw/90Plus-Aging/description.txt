@@ -1,0 +1,12 @@
+Dataset:
+ddu139supp_data_file.txt
+
+Downloaded from:
+http://hmg.oxfordjournals.org/content/23/16/4420/suppl/DC1
+Specifically: 
+http://hmg.oxfordjournals.org/content/23/16/4420/suppl/DC1/ddu139supp_data_file.txt
+
+Publication reference:
+Hum Mol Genet August 15, 2014 vol. 23 no. 16 4420-4432
+doi: 10.1093/hmg/ddu139
+Genome-wide association meta-analysis of human longevity identifies a novel locus conferring survival beyond 90 years of age
