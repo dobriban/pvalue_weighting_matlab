@@ -83,7 +83,7 @@
 \tableofcontents
 \section{Introduction}
 
-This MATLAB package contains open source implementations of p-value weighting methods for multiple testing, including Spjotvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. %These are methods for improving power in multiple testing via the use of prior information.  
+This MATLAB package contains open source implementations of p-value weighting methods for multiple testing, including Spj\o tvoll, exponential and Bayes weights \citep[proposed in][]{dobriban2015optimal}. %These are methods for improving power in multiple testing via the use of prior information.  
 
 \begin{itemize}
 \item{Version: } 0.0.1
@@ -141,10 +141,10 @@ The outputs are:
 
 This method was proposed in \cite{dobriban2015optimal}.
 
-\subsection{Spjotvoll}
+\subsection{Spj\o tvoll}
 
 
-Spjotvoll p-value weights can be computed using:  \verb+[w, c]+ \verb+= spjotvoll_weights(mu, q)+. The inputs our best guess at $\mu_i$ from the prior data:
+Spj\o tvoll p-value weights can be computed using:  \verb+[w, c]+ \verb+= spjotvoll_weights(mu, q)+. The inputs our best guess at $\mu_i$ from the prior data:
 
 \begin{itemize}
 \item \verb+mu+:  a vector of length J, the estimated means of test statistics, derived from the prior data
@@ -157,7 +157,7 @@ The outputs are:
 \item \verb+c+:  the normalizing constant produced by solving the optimization problem.
 \end{itemize}
 
-This method was proposed by \cite{wasserman2006weighted, roeder2009genome} and independently by \cite{rubin2006method}. It was called Spjotvoll weights in  \cite{dobriban2015optimal}, in honor of \citep{spjotvoll1972optimality}.
+This method was proposed by \cite{wasserman2006weighted, roeder2009genome} and independently by \cite{rubin2006method}. It was called Spj\o tvoll weights in  \cite{dobriban2015optimal}, in honor of \citep{spjotvoll1972optimality}.
 
 \subsection{Exponential}
 
