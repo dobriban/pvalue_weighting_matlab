@@ -1,0 +1,7 @@
+Results of P-value Weighting Analysis -  clustered results 
+
+Prior Study: C4D-CAD.C4D.Consortium.Nat.Genet.2011
+Current Study: 90Plus-Aging.Deelen.Hum Mol Gen.2014
+
+Unweighted	Spjotvoll	Bayes; sigma = 0.100000: 	Bayes; sigma = 1.000000: 	Bayes; sigma = 10.000000: 	Exponential; beta = 1.000000: 	Exponential; beta = 2.000000: 	Exponential; beta = 4.000000: 	Select top; P_thresh = 1.000000e-02: 	Select top; P_thresh = 1.000000e-04: 	Select top; P_thresh = 1.000000e-06: 	Monotone; min = 0.010000. max =10.000000	Monotone; min = 0.010000. max =Inf	Monotone; min = 0.100000. max =10.000000	Monotone; min = 0.100000. max =Inf	Monotone; min = 0.500000. max =10.000000	Monotone; min = 0.500000. max =Inf	\\ 
+& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{0}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}& \multicolumn{1}{l|}{1}\\ 

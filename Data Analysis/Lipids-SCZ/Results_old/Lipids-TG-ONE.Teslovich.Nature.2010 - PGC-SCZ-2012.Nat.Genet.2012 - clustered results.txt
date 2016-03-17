@@ -1,0 +1,91 @@
+Results of P-value Weighting Analysis - Clustered Results
+
+Prior Study: Lipids-TG-ONE.Teslovich.Nature.2010
+Current Study: PGC-SCZ-2012.Nat.Genet.2012
+
+Number of overlapping SNPs: 1162309
+Number of overlapping SNPs not found in UCSC database: 3481
+
+Weighted Bonferroni Methods Tested: 
+Unweighted; Spjotvoll; Regularized; sigma = 0.100000: ; Regularized; sigma = 1.000000: ; Regularized; sigma = 10.000000: ; Exponential; beta = 1.000000: ; Exponential; beta = 2.000000: ; Exponential; beta = 4.000000: ; Select top; P_thresh = 1.000000e-02: ; Select top; P_thresh = 1.000000e-04: ; Select top; P_thresh = 1.000000e-06: ; 
+Family-wise Error Rate controlled at: 5.000000e-02
+
+Number of Significant SNPs in Distinct LD Blocks: 
+Unweighted: 4
+Spjotvoll: 1
+Regularized; sigma = 0.100000: : 1
+Regularized; sigma = 1.000000: : 1
+Regularized; sigma = 10.000000: : 5
+Exponential; beta = 1.000000: : 1
+Exponential; beta = 2.000000: : 0
+Exponential; beta = 4.000000: : 0
+Select top; P_thresh = 1.000000e-02: : 2
+Select top; P_thresh = 1.000000e-04: : 2
+Select top; P_thresh = 1.000000e-06: : 2
+
+Parameter settings:
+q = 5.000000e-02
+pcer = 8.603564e-07
+sigma = 1.000000e-01
+sigma = 1.000000e+00
+sigma = 1.000000e+01
+beta= 1.000000e+00
+beta= 2.000000e+00
+beta= 4.000000e+00
+P_thresh= 1.000000e-02
+P_thresh= 1.000000e-04
+P_thresh= 1.000000e-06
+
+Lead Significant SNPs in each cluster: 
+Unweighted: 4 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+rs7004633	8	89760310	1.446830e-08
+rs11191580	10	104906210	2.231700e-08
+rs548181	11	125461708	2.910650e-08
+
+Spjotvoll: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+
+Regularized; sigma = 0.100000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+
+Regularized; sigma = 1.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+
+Regularized; sigma = 10.000000: : 5 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+rs7004633	8	89760310	1.446830e-08
+rs11191580	10	104906210	2.231700e-08
+rs548181	11	125461708	2.910650e-08
+rs17597926	18	53205937	4.353870e-08
+
+Exponential; beta = 1.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2021722	6	30174130	4.301380e-11
+
+Exponential; beta = 2.000000: : 0 SNPs
+rsID	chr	position	current_Pvalue
+
+Exponential; beta = 4.000000: : 0 SNPs
+rsID	chr	position	current_Pvalue
+
+Select top; P_thresh = 1.000000e-02: : 2 SNPs
+rsID	chr	position	current_Pvalue
+rs13025591	2	236795342	1.065720e-06
+rs2021722	6	30174130	4.301380e-11
+
+Select top; P_thresh = 1.000000e-04: : 2 SNPs
+rsID	chr	position	current_Pvalue
+rs2272417	2	27706639	7.052640e-06
+rs3131783	6	30932067	2.689780e-09
+
+Select top; P_thresh = 1.000000e-06: : 2 SNPs
+rsID	chr	position	current_Pvalue
+rs2272417	2	27706639	7.052640e-06
+rs3131783	6	30932067	2.689780e-09
+

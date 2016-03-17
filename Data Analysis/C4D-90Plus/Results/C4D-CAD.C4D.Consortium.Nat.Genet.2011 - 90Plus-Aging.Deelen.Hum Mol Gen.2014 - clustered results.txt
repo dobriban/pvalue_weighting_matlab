@@ -1,0 +1,117 @@
+Results of P-value Weighting Analysis - Clustered Results
+
+Prior Study: C4D-CAD.C4D.Consortium.Nat.Genet.2011
+Current Study: 90Plus-Aging.Deelen.Hum Mol Gen.2014
+
+Number of overlapping SNPs: 519311
+Number of overlapping SNPs not found in UCSC database: 759
+
+Weighted Bonferroni Methods Tested: 
+Unweighted; Spjotvoll; Bayes; sigma = 0.100000: ; Bayes; sigma = 1.000000: ; Bayes; sigma = 10.000000: ; Exponential; beta = 1.000000: ; Exponential; beta = 2.000000: ; Exponential; beta = 4.000000: ; Select top; P_thresh = 1.000000e-02: ; Select top; P_thresh = 1.000000e-04: ; Select top; P_thresh = 1.000000e-06: ; Monotone; min = 0.010000. max =10.000000; Monotone; min = 0.010000. max =Inf; Monotone; min = 0.100000. max =10.000000; Monotone; min = 0.100000. max =Inf; Monotone; min = 0.500000. max =10.000000; Monotone; min = 0.500000. max =Inf; 
+Family-wise Error Rate controlled at: 5.000000e-02
+
+Number of Significant SNPs in Distinct LD Blocks: 
+Unweighted: 1
+Spjotvoll: 1
+Bayes; sigma = 0.100000: : 1
+Bayes; sigma = 1.000000: : 1
+Bayes; sigma = 10.000000: : 1
+Exponential; beta = 1.000000: : 1
+Exponential; beta = 2.000000: : 1
+Exponential; beta = 4.000000: : 1
+Select top; P_thresh = 1.000000e-02: : 1
+Select top; P_thresh = 1.000000e-04: : 1
+Select top; P_thresh = 1.000000e-06: : 0
+Monotone; min = 0.010000. max =10.000000: 1
+Monotone; min = 0.010000. max =Inf: 1
+Monotone; min = 0.100000. max =10.000000: 1
+Monotone; min = 0.100000. max =Inf: 1
+Monotone; min = 0.500000. max =10.000000: 1
+Monotone; min = 0.500000. max =Inf: 1
+
+Parameter settings:
+q = 5.000000e-02
+pcer = 1.925628e-06
+sigma = 1.000000e-01
+sigma = 1.000000e+00
+sigma = 1.000000e+01
+beta= 1.000000e+00
+beta= 2.000000e+00
+beta= 4.000000e+00
+P_thresh= 1.000000e-02
+P_thresh= 1.000000e-04
+P_thresh= 1.000000e-06
+lower_bounds= 1.000000e-02
+lower_bounds= 1.000000e-01
+lower_bounds= 5.000000e-01
+upper_bounds= 1.000000e+01
+upper_bounds= Inf
+
+Lead Significant SNPs in each cluster: 
+Unweighted: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Spjotvoll: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Bayes; sigma = 0.100000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Bayes; sigma = 1.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Bayes; sigma = 10.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Exponential; beta = 1.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Exponential; beta = 2.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Exponential; beta = 4.000000: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Select top; P_thresh = 1.000000e-02: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Select top; P_thresh = 1.000000e-04: : 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Select top; P_thresh = 1.000000e-06: : 0 SNPs
+rsID	chr	position	current_Pvalue
+
+Monotone; min = 0.010000. max =10.000000: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Monotone; min = 0.010000. max =Inf: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Monotone; min = 0.100000. max =10.000000: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Monotone; min = 0.100000. max =Inf: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Monotone; min = 0.500000. max =10.000000: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
+Monotone; min = 0.500000. max =Inf: 1 SNPs
+rsID	chr	position	current_Pvalue
+rs2075650	19	45395618	6.125130e-17
+
