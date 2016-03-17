@@ -23,7 +23,7 @@ chr = chr(h==1);
 
 
 %% Load distiLD LD data
-load('../../Data/Processed/DistiLD.lds.mat','LD_chr','LD_left_end','LD_right_end');
+load('../../Data/Processed/lds.mat','LD_chr','LD_left_end','LD_right_end');
 
 %%prune
 %% sort by chromosome

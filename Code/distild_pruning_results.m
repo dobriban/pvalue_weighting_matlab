@@ -1,6 +1,8 @@
 %% Load Prior data
 %loads overlapping SNPs with their chromosomal information
 %as well as prior association information
+%Note: if you add new methods, need to edit only the section where the
+%parameters are printed
 
 %load snp info
 load('../../Data/Processed/snp141Common.mat','SNP','chr','pos');
@@ -82,6 +84,18 @@ if exist('P_thresh','var')
         str = sprintf('P_thresh= %e\n',P_thresh(i));
         fprintf(fileID,str);
     end 
+end
+if exist('lower_bounds','var')
+    for i=1:length(lower_bounds)
+        str = sprintf('lower_bounds= %e\n',lower_bounds(i));
+        fprintf(fileID,str);
+    end
+end
+if exist('upper_bounds','var')
+    for i=1:length(upper_bounds)
+        str = sprintf('upper_bounds= %e\n',upper_bounds(i));
+        fprintf(fileID,str);
+    end
 end
 fprintf(fileID,'\n');
 

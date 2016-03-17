@@ -1,5 +1,8 @@
 function [snp_overlap, P_prior, N_prior, Z_prior, P_current, N_current]= load_data(prior, current)
-
+% loads uniformly processed data for p-value weighting analysis
+% both prior and current data sets must be stored in a specific folder
+%
+% and they must have P,SNP,N variables
 
 load(['../../Data/Processed/' prior '.mat'],'P','SNP','N'); 
 P_prior = P;

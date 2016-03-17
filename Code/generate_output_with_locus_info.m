@@ -1,5 +1,7 @@
 %this file outputs the results of the iGWAS
 %compare the outputs of all the methods:
+%Note: if you add new methods, need to edit only the section where the
+%parameters are printed
 
 %load snp info
 load('../../Data/Processed/snp141Common.mat','SNP','chr','pos');
@@ -64,8 +66,20 @@ if exist('beta','var')
     fprintf(fileID,str);
 end
 if exist('P_thresh','var')
-    for i=1:length(sigma_array)
+    for i=1:length(P_thresh)
         str = sprintf('P_thresh= %e\n',P_thresh(i));
+        fprintf(fileID,str);
+    end
+end
+if exist('lower_bounds','var')
+    for i=1:length(lower_bounds)
+        str = sprintf('lower_bounds= %e\n',lower_bounds(i));
+        fprintf(fileID,str);
+    end
+end
+if exist('upper_bounds','var')
+    for i=1:length(upper_bounds)
+        str = sprintf('upper_bounds= %e\n',upper_bounds(i));
         fprintf(fileID,str);
     end
 end

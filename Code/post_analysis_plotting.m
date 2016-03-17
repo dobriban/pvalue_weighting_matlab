@@ -11,6 +11,7 @@ title(str)
 filename = sprintf( './Results/Pvalues_prior.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
+close(gcf);
 
 %%
 n = floor(sqrt(length(unique(P_current))));
@@ -21,6 +22,7 @@ title(str)
 filename = sprintf( './Results/Current_Pvalues.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
+close(gcf);
 
 %%  scatter z-scores
 Z_current = norminv(P_current/2);
@@ -31,6 +33,7 @@ xlabel(['Prior Z: ' prior]); ylabel(['Current Z: ' current]);
 filename = sprintf( './Results/Scatter_zScores.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
+close(gcf);
 
 %% plot the weights
 if any(strcmp(methods,'Regularized'))
@@ -42,6 +45,8 @@ if any(strcmp(methods,'Regularized'))
     saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
 end
+close(gcf);
+
 %% min weight & actual weights
 %only do this if have spjotvoll, regularized & exp
 if any(strcmp(methods,'Spjotvoll'))&&any(strcmp(methods,'Exponential'))&&any(strcmp(methods,'Regularized'))
@@ -72,4 +77,5 @@ if any(strcmp(methods,'Spjotvoll'))&&any(strcmp(methods,'Exponential'))&&any(str
     saveas(gcf, filename,'png');
     
     fprintf(['Saved Results to ' filename '\n']);
+    close(gcf);
 end
