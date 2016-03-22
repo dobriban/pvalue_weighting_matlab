@@ -4,26 +4,27 @@ J = length(mu);
 s = zeros(J,1);
 
 [mu_s,sort_index] = sort(mu);
-u = exp(beta*mu_s);
+u = exp(-beta*mu_s);
 c = mean(u);
 S  = sum(s);
 w = u/c*(J-S/q)/(J-S);
 ind = find(w >1/q);
 
-surplus = sum(w(ind))-length(w(ind))/q;
-w(ind) = 1/q;
-k = length(w(ind));
-
-while (surplus>0)
-increment = min(1/q-w(J-k),surplus);
-w(J-k) = w(J-k) + increment;
-surplus = surplus - increment;
-k = k+1;
+if q>0
+    surplus = sum(w(ind))-length(w(ind))/q;
+    w(ind) = 1/q;
+    k = length(w(ind));
+    
+    while (surplus>0)
+        increment = min(1/q-w(k+1),surplus);
+        w(k+1) = w(k+1) + increment;
+        surplus = surplus - increment;
+        k = k+1;
+    end
 end
-
 v = zeros(J,1);
 for i=1:J
-v(i) = w(find(sort_index==i));    
+    v(i) = w(find(sort_index==i));
 end
 w = v;
 %plot(mu,w,'*');
