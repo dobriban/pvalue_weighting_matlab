@@ -1,4 +1,4 @@
-%% Study the power of various weighting schemes
+%% Study the power of various weighting schemes - Unbounded Exp
 % depends on weighting_power_study
 codedir =  ['C:/Git/pvalue_weighting_matlab/Examples/Example10- Compare Weighting Methods - new'];
 cd(codedir);
@@ -29,7 +29,7 @@ end
 
 beta = global_array;
 for i=1:length(beta);
-    w = exp_weights(mu, beta(i), pcer);
+    w = exp_weights_unbounded(mu, beta(i));
     w = w/mean(w);
     power_exp(i) = power0(w);
 end
@@ -66,13 +66,11 @@ h = plot(global_array, power_reg,'linewidth',2); set(h,'LineStyle',a{2});
 h = plot(global_array, power_exp,'linewidth',2); set(h,'LineStyle',a{3});
 h = plot(global_array, power_top,'linewidth',2); set(h,'LineStyle',a{4});
 ylim([0,0.2])
-h = legend('Unweighted','Bayes','Exponential','Filtering','location','Best');
+h = legend('Unweighted','Bayes','Exp Unbounded','Filtering','location','Best');
 ylabel('Power');
 set(h,'FontSize',8);
 
-%%
-saveTightFigure(gcf,'compare_weighting_methods.pdf')
 %% plot
-filename = sprintf( './compare_weighting_methods_color.png');
+filename = sprintf( './compare_weighting_methods_color_unbounded_exp.png');
 saveas(gcf, filename,'png');
 fprintf(['Saved Results to ' filename '\n']);
