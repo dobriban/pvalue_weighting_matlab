@@ -206,12 +206,8 @@ else %brent
         lambda = fzero(f,x0);
         Jq_temp = H(lambda); %should equal J*q
         %J x q_star = Jq_temp
-        q_star = Jq_temp;
-        true_q = q_star/J;
-        
-        %Old:
-        %         q_star = J*q;
-        %         true_q = q;
+        q_star = J*q;
+        true_q = q;
         %ezplot(f,x0);
     end
     

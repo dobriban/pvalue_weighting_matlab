@@ -23,13 +23,5 @@ err = abs(mean(w)-1);
 
 %% Notes
 %In bayes_weights, the values of l_prime are all nearly 1;
-%l_prime = find_crossing(mu,gamma)
-%length(unique(l_prime)) = 234;
-%add jitter
-
-%then in bayes_weights, the normalization of q in the last branch of the
-%search for lambda was not correct
-%I have now changed it to 
-%q_star = Jq_temp;
-%true_q = q_star/J;
-        
+        l_prime = find_crossing(mu,gamma);
+    

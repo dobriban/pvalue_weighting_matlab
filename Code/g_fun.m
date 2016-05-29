@@ -1,5 +1,5 @@
 function [g,l_prime] = g_fun(eta,gamma,lambda,l_prime)
-%g is the dual constraint function: 1 if lambda <= l_prime, and a phi(c_1)
+%g is the dual constraint function: 1 if lambda <= l_prime, and phi(c_1)
 %otherwise
 %
 %Inputs
