@@ -54,4 +54,4 @@ sum(problem_snp)
 %%
 N = 21856*ones(length(SNP),1);
 %%
-save('../../Processed/PGC-SCZ-2012.Nat.Genet.2012.mat','SNP','chr','bp','A1','A2','or','se','P','N');
+save('../../../Processed/PGC-SCZ-2012.Nat.Genet.2012.mat','SNP','chr','bp','A1','A2','or','se','P','N');

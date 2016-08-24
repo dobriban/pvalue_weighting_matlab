@@ -49,4 +49,4 @@ toc
 
 
 %%
-save('../../Processed/Cardiogram-CAD.Nat.Genet.2011.mat','SNP','chr','pos','A1','A2','freqA1','log_odds','log_odds_se','P','N');
+save('../../../Processed/Cardiogram-CAD.Nat.Genet.2011.mat','SNP','chr','pos','A1','A2','freqA1','log_odds','log_odds_se','P','N');

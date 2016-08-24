@@ -4,7 +4,7 @@ C4D_CAD_DISCOVERY_METAANALYSIS_UPDATE.TXT
 Download from:
 http://www.cardiogramplusc4d.org/downloads/
 Specifically, the data set is found in a zipped format at: 
-ftp://ftp.sanger.ac.uk/pub/cardiogramplusc4d/cardiogram_gwas_results.zip
+ftp://ftp.sanger.ac.uk/pub/cardiogramplusc4d/c4d_cad_discovery_metaanalysis.zip
 
 Publication reference: 
 A genome-wide association study in Europeans and South Asians identifies five new loci for coronary artery disease.

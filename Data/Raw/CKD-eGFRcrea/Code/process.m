@@ -51,4 +51,4 @@ P = P(~problem_snp);
 %%
 N = 62237*ones(length(SNP),1);
 %%
-save('../../Processed/CKD-eGFRcrea.Kottgen.Nat.Genet.2010.mat','SNP','A1','A2','freqA1','direction','P','N');
+save('../../../Processed/CKD-eGFRcrea.Kottgen.Nat.Genet.2010.mat','SNP','A1','A2','freqA1','direction','P','N');
